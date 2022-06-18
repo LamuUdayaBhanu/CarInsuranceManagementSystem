@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>register success page</title>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body style="background-image: url('image/signup.jpg');  background-size: cover; height:100%; background-repeat: no-repeat">
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  		
+  		<a class="navbar-brand" href="#">Car Insurance Management System</a>
+
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  	<div>
+  		<a class="nav-link" th:href="@{/login}">Login</a>
+  	</div>
+	</nav>
+	<br>
+	<div class="container text-center">
+		<div>
+			<h3> You have registered Successfully</h3>
+		</div>
+	</div>
+</body>
+</html>

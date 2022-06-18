@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Car Details</title>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body style="background-color: #d5f4e6;  background-size: cover; height:100%; background-repeat: no-repeat">
+	<div class="home">
+		<div class="text-center"><h2>[[${pageTitle}]]</h2></div>
+		<form th:action="@{/cars/save}" method="post" th:object="${car}" style="max-width:500px; margin:0 auto;">
+			<input type="hidden" th:field="*{id}">
+			<div class="border border-secondary rounded p-3">
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-lable">Customer Name</label>
+					<div class="col-sm-8">
+						<input type="text" th:field="*{c_name}" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-lable">CarModel</label>
+					<div class="col-sm-8">
+						<input type="text" th:field="*{car_model}" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-form-lable col-4">Car RegistrationNo</label>
+					<div class="col-8">
+						<input type="text" class="form-control" th:field="*{car_regNo}"/>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-lable">Category</label>
+					<div class="col-sm-8">
+						<input type="text" th:field="*{category}" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-lable">ChassisNo</label>
+					<div class="col-sm-8">
+						<input type="text" th:field="*{chassisno}" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-lable">Cost</label>
+					<div class="col-sm-8">
+						<input type="text" th:field="*{cost}" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-lable">Duration</label>
+					<div class="col-sm-8">
+						<input type="text" th:field="*{duration}" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-lable">Expired Date</label>
+					<div class="col-sm-8">
+						<input type="date" th:field="*{exp_date}" class="form-control"/>
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-lable">InsurancePolicyNo</label>
+					<div class="col-sm-8">
+						<input type="text" th:field="*{insu_Policy}" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-lable">Registration Date</label>
+					<div class="col-sm-8">
+						<input type="date" th:field="*{reg_date}" class="form-control"/>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-lable">Status</label>
+					<div class="col-sm-8">
+						<input type="text" th:field="*{status}" class="form-control"/>
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="btn btn-primary m-2">Save</button>
+					<button type="button" class="btn btn-secondary m-2">Cancel</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	</body>
+</html>
